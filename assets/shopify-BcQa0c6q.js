@@ -1,0 +1,1 @@
+import{t as e}from"./site-B2YstU1X.js";function t(t){return t.length?`${e}/cart/${t.map(e=>`${e.variantId}:${e.qty}`).join(`,`)}`:`${e}/cart`}var n={contactForm:`${e}/contact#contact_form`,account:`${e}/account/login`};export{n,t};
