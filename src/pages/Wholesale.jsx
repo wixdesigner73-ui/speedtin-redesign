@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { wholesale } from "../data/site";
+import { wholesaleArt } from "../data/heroArt";
 import PageHero from "../components/PageHero";
 import { Arrow } from "../components/Icons";
 import { useMeta } from "../hooks/useMeta";
@@ -8,7 +9,7 @@ export default function Wholesale() {
   useMeta(wholesale.title, wholesale.lead);
   return (
     <>
-      <PageHero eyebrow="Wholesale" title={wholesale.title} lede={wholesale.lead} image="/media/wholesale-mood.webp">
+      <PageHero eyebrow="Wholesale" title={wholesale.title} lede={wholesale.lead} image="/media/wholesale-mood.webp" art={wholesaleArt}>
         <Link to="/pages/contact-us" className="btn">Contact Us <Arrow /></Link>
       </PageHero>
 

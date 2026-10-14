@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { contact } from "../data/site";
 import { shopifyPaths } from "../lib/shopify";
+import { contactArt } from "../data/heroArt";
 import PageHero from "../components/PageHero";
 import { Arrow } from "../components/Icons";
 import { useMeta } from "../hooks/useMeta";
@@ -11,7 +12,7 @@ export default function Contact() {
   const topic = contact.topics.find(([v]) => v === sp.get("topic"))?.[0] || "wholesale-solutions";
   return (
     <>
-      <PageHero eyebrow={contact.sub} title={contact.title} lede={contact.copy} />
+      <PageHero eyebrow={contact.sub} title={contact.title} lede={contact.copy} art={contactArt} />
       <section className="cf on-light">
         <div className="wrap cf__grid">
           {/*

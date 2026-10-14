@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { bars } from "../data/site";
 import { barsProducts } from "../data/products";
+import { barsArt } from "../data/heroArt";
 import PageHero from "../components/PageHero";
 import ProductCard from "../components/ProductCard";
 import Testimonials from "../components/Testimonials";
@@ -13,7 +14,7 @@ export default function Bars() {
   const [b1, b2] = bars.blocks;
   return (
     <>
-      <PageHero eyebrow="Bars & Restaurants" title={bars.title} lede={bars.lead} image="/media/bar-duo.webp" />
+      <PageHero eyebrow="Bars & Restaurants" title={bars.title} lede={bars.lead} image="/media/bar-duo.webp" art={barsArt} />
 
       <section className="bars on-light">
         <div className="wrap bars__bundles">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { howTo, method } from "../data/site";
 import PageHero from "../components/PageHero";
+import { pour } from "../data/heroArt";
 import YouTubeEmbed from "../components/YouTubeEmbed";
 import { Arrow } from "../components/Icons";
 import { useMeta } from "../hooks/useMeta";
@@ -12,7 +13,7 @@ export default function HowTo() {
   const q = howTo.quick[tab];
   return (
     <>
-      <PageHero eyebrow="How To" title={<>{howTo.title} <span className="serif">{howTo.sub}</span></>} lede="How to use your Speed Tin." image="/media/bar-pour-trio.webp" />
+      <PageHero eyebrow="How To" title={<>{howTo.title} <span className="serif">{howTo.sub}</span></>} lede="How to use your Speed Tin." image="/media/bar-pour-trio.webp" art={pour} />
 
       <section className="how on-light">
         <div className="wrap how__full">

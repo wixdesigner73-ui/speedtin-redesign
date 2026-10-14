@@ -1,14 +1,46 @@
-/* ================== PAGE HERO ================== */
-.phero { position: relative; overflow: hidden; isolation: isolate; padding: calc(var(--header-h) + clamp(56px, 9vw, 130px)) 0 clamp(54px, 8vw, 110px); background: radial-gradient(90% 100% at 85% 0%, #4a3023 0%, transparent 62%), linear-gradient(180deg, #1c110d, var(--espresso)); }
-.phero--tall { padding-bottom: clamp(90px, 12vw, 180px); }
+/* ================== PAGE HERO (cinematic, same language as the home page) ================== */
+.phero {
+  --hw: clamp(440px, 46vw, 780px);
+  --hh: calc(var(--hw) * var(--ar));
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(580px, 84svh, 880px);
+  padding: calc(var(--header-h) + 36px) 0 clamp(54px, 7vw, 100px);
+  background: radial-gradient(90% 100% at 85% 0%, #3f2a1f 0%, transparent 62%), linear-gradient(180deg, #1a100c, var(--espresso) 70%, #2a1b15);
+}
+.phero__fx { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.phero__glow { position: absolute; right: -16vw; top: -20vw; width: min(1100px, 82vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(closest-side, rgba(185, 108, 55, 0.36), rgba(185, 108, 55, 0.1) 52%, transparent 74%); }
 .phero__bg { position: absolute; inset: 0; z-index: -1; }
-.phero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.34; filter: saturate(0.85); }
-.phero__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28, 17, 13, 0.92) 0%, rgba(28, 17, 13, 0.55) 55%, rgba(28, 17, 13, 0.82) 100%), linear-gradient(180deg, rgba(28, 17, 13, 0.3), rgba(36, 24, 19, 0.95)); }
-.phero__in { display: grid; gap: 22px; justify-items: start; }
-.phero__title { max-width: 13em; font-size: clamp(2.6rem, 6.2vw, 6.2rem); }
+.phero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; filter: saturate(0.85); }
+.phero__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26, 16, 12, 0.94) 0%, rgba(26, 16, 12, 0.6) 55%, rgba(26, 16, 12, 0.85) 100%), linear-gradient(180deg, rgba(26, 16, 12, 0.3), rgba(36, 24, 19, 0.96)); }
+.phero__in { position: relative; z-index: 6; display: grid; gap: 22px; justify-items: start; }
+.phero__in > * { max-width: min(46vw, 660px); }
+.phero--center .phero__in { justify-items: center; text-align: center; }
+.phero__title { font-size: clamp(2.6rem, 5.5vw, 5.8rem); }
 .phero__title .serif { color: var(--champagne); }
 .phero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
-.phero--center .phero__in { justify-items: center; text-align: center; }
+
+.phero__hand { --sx: 70%; --sy: 70%; position: absolute; z-index: 3; width: var(--hw); left: calc(var(--sx) - var(--ax) * var(--hw)); top: calc(var(--sy) - var(--ay) * var(--hh)); pointer-events: none; }
+.phero__handInner { position: relative; will-change: transform; }
+.phero__handInner img { width: 100%; filter: drop-shadow(0 38px 46px rgba(0, 0, 0, 0.55)) drop-shadow(-14px 8px 30px rgba(185, 108, 55, 0.18)); }
+.phero__anchor { position: absolute; left: calc(var(--ax) * 100%); top: calc(var(--ay) * 100%); width: 2px; height: 2px; margin: -1px 0 0 -1px; }
+.phero__stream { position: absolute; left: 0; top: 0; z-index: 4; pointer-events: none; }
+
+.phero__art { position: absolute; right: 0; top: 0; bottom: 0; width: 58%; z-index: 3; pointer-events: none; }
+.phero__item { position: absolute; will-change: transform; }
+.phero__item img { display: block; width: 100%; height: auto; filter: drop-shadow(0 34px 34px rgba(8, 4, 2, 0.5)); will-change: transform; }
+
+@media (max-width: 900px) {
+  .phero { --hw: 122vw; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: 0; padding-top: calc(var(--header-h) + 34px); padding-bottom: 0; }
+  .phero__in { padding-bottom: 28px; }
+  .phero__in > * { max-width: 100%; }
+  .phero--pour { padding-bottom: calc(var(--hh) * 0.8); }
+  .phero__hand { --sx: 40%; --sy: calc(100% - 70px); }
+  .phero__art { position: relative; width: 100%; height: 88vw; right: auto; margin-top: 4px; }
+}
 
 /* ================== PRODUCT PAGE ================== */
 .pdp { background: radial-gradient(80% 60% at 20% 0%, #3d281d, transparent 70%), linear-gradient(180deg, #1c110d, var(--espresso) 40%, #2a1b15); padding: calc(var(--header-h) + clamp(18px, 3vw, 44px)) 0 clamp(60px, 8vw, 120px); }
@@ -220,3 +252,4 @@ details a { text-decoration: underline; text-underline-offset: 3px; }
   position: absolute;
   inset: 0;
 }
+.phero--compact { min-height: 0; padding-bottom: clamp(40px, 5vw, 70px); }

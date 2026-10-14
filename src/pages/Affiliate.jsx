@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { affiliate, affiliateSignupUrl } from "../data/site";
+import { pour } from "../data/heroArt";
 import PageHero from "../components/PageHero";
 import { Arrow } from "../components/Icons";
 import { useMeta } from "../hooks/useMeta";
@@ -8,7 +9,7 @@ export default function Affiliate() {
   useMeta("Affiliate Program", affiliate.lead);
   return (
     <>
-      <PageHero eyebrow="Affiliate" title={affiliate.title} lede={affiliate.lead} image="/media/bar-pour-trio.webp">
+      <PageHero eyebrow="Affiliate" title={affiliate.title} lede={affiliate.lead} image="/media/bar-pour-trio.webp" art={pour}>
         <a href={affiliateSignupUrl} className="btn" target="_blank" rel="noopener noreferrer">Become an Affiliate <Arrow /></a>
       </PageHero>
       <section className="aff on-light">

@@ -11,7 +11,7 @@ export default function SearchPage() {
   useMeta(q ? `Search: ${q}` : "Search");
   return (
     <>
-      <PageHero eyebrow="Search" title={q ? <>“{q}”</> : "Search"} lede={q ? `${results.length} result${results.length === 1 ? "" : "s"}` : "Use the search icon to find a product."} />
+      <PageHero compact eyebrow="Search" title={q ? <>“{q}”</> : "Search"} lede={q ? `${results.length} result${results.length === 1 ? "" : "s"}` : "Use the search icon to find a product."} />
       <section className="coll on-light" style={{ paddingTop: 40 }}>
         <div className="wrap srch__grid">
           {results.map((p) => (<ProductCard key={p.handle} product={p} />))}

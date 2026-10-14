@@ -4,6 +4,11 @@ import { nav, accountUrl } from "../data/site";
 import { useCart } from "../context/CartContext";
 import { Arrow, Bag, Chevron, Search, User } from "./Icons";
 import { lockScroll } from "../lib/motion";
+import { getProduct } from "../data/products";
+import { social } from "../data/site";
+import { money } from "../lib/format";
+
+const priceFor = (to) => { const p = getProduct(to.split("/").pop()); return p ? money(p.price) : null; };
 
 export default function Header({ onSearch }) {
   const { count, setOpen, bump } = useCart();
@@ -83,6 +88,7 @@ export default function Header({ onSearch }) {
                 <span className="mega__img">{c.img ? <img src={`/media/${c.img}.webp`} alt="" loading="lazy" /> : <img src="/media/grips-bar.webp" alt="" loading="lazy" className="photo" />}</span>
                 <strong>{c.label}</strong>
                 <em>{c.sub}</em>
+                <span className="mega__price">{priceFor(c.to) && <>From {priceFor(c.to)}</>}<Arrow /></span>
               </Link>
             ))}
           </div>
@@ -90,14 +96,26 @@ export default function Header({ onSearch }) {
       </header>
 
       <div id="mobile-menu" className={`mmenu ${menu ? "is-open" : ""}`} aria-hidden={!menu}>
+        <i className="mmenu__glow" aria-hidden="true" />
+        <img className="mmenu__hand" src="/media/hero-hand.webp" alt="" aria-hidden="true" />
         <nav className="mmenu__nav" aria-label="Mobile">
           {nav.map((n, i) => (
             <div key={n.label} style={{ "--i": i }} className="mmenu__row">
-              <Link to={n.to} tabIndex={menu ? 0 : -1}>{n.label}</Link>
+              <NavLink to={n.to} end={n.to === "/"} tabIndex={menu ? 0 : -1} className="mmenu__link">
+                <span className="mmenu__n">0{i + 1}</span>
+                <span className="mmenu__t">{n.label}</span>
+                <Arrow />
+              </NavLink>
               {n.children && (
-                <ul>
+                <ul className="mmenu__tiles">
                   {n.children.map((c) => (
-                    <li key={c.to}><Link to={c.to} tabIndex={menu ? 0 : -1}>{c.label} <span>{c.sub}</span></Link></li>
+                    <li key={c.to}>
+                      <Link to={c.to} tabIndex={menu ? 0 : -1}>
+                        <span className="mmenu__img"><img src={c.img ? `/media/${c.img}.webp` : "/media/grips-bar.webp"} alt="" className={c.img ? "" : "photo"} loading="lazy" /></span>
+                        <strong>{c.label}</strong>
+                        <em>{priceFor(c.to) ? `From ${priceFor(c.to)}` : c.sub}</em>
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               )}
@@ -105,7 +123,10 @@ export default function Header({ onSearch }) {
           ))}
         </nav>
         <div className="mmenu__foot">
-          <a href={accountUrl} tabIndex={menu ? 0 : -1}>Log in</a>
+          <div className="mmenu__links">
+            <a href={accountUrl} tabIndex={menu ? 0 : -1}>Log in</a>
+            {social.map((x) => (<a key={x.label} href={x.href} target="_blank" rel="noopener noreferrer" tabIndex={menu ? 0 : -1}>{x.label}</a>))}
+          </div>
           <Link to="/collections/shop" className="btn" tabIndex={menu ? 0 : -1}>Shop Now <Arrow /></Link>
         </div>
       </div>
