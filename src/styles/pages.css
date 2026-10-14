@@ -170,7 +170,8 @@ details a { text-decoration: underline; text-underline-offset: 3px; }
 .how__model .img img { height: 96%; width: auto; filter: drop-shadow(0 26px 22px rgba(0, 0, 0, 0.5)); }
 .how__model > div:last-child { display: grid; gap: 16px; justify-items: start; }
 .how__model .h2 { font-size: clamp(1.4rem, 2.2vw, 2.2rem); }
-.how__model .lede { font-size: 0.98rem; }
+.how__model .lede, .on-light .how__model .lede { font-size: 0.98rem; color: var(--ivory); }
+.on-light .how__model .h2 { color: var(--ivory); }
 .how__model .btn--dark { --bg: var(--ivory); --fg: var(--espresso); }
 .how__disc { max-width: 52em !important; padding: 26px 30px; border-radius: 22px; background: rgba(185, 108, 55, 0.1); border: 1px solid rgba(185, 108, 55, 0.3); display: grid; gap: 8px; }
 .how__disc .eyebrow { color: var(--amber); }
