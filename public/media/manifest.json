@@ -1,0 +1,182 @@
+{
+  "bar-pour-solo": {
+    "w": 2200,
+    "h": 1467
+  },
+  "bar-pour-trio": {
+    "w": 2200,
+    "h": 1467
+  },
+  "bar-duo": {
+    "w": 2200,
+    "h": 1467
+  },
+  "bar-team": {
+    "w": 2200,
+    "h": 1467
+  },
+  "restaurant": {
+    "w": 2400,
+    "h": 1601
+  },
+  "home-kitchen": {
+    "w": 2200,
+    "h": 1467
+  },
+  "home-kitchen-2": {
+    "w": 2200,
+    "h": 1467
+  },
+  "bartender-pour": {
+    "w": 1800,
+    "h": 1979
+  },
+  "bartender-double": {
+    "w": 1800,
+    "h": 2700
+  },
+  "bartender-portrait": {
+    "w": 1206,
+    "h": 1275
+  },
+  "pour-orange": {
+    "w": 800,
+    "h": 1296
+  },
+  "grips-bar": {
+    "w": 2200,
+    "h": 1467
+  },
+  "products-six": {
+    "w": 2000,
+    "h": 1334
+  },
+  "accessories-mat": {
+    "w": 2000,
+    "h": 1334
+  },
+  "pour-martini": {
+    "w": 2200,
+    "h": 1467
+  },
+  "pour-cosmo": {
+    "w": 2200,
+    "h": 1467
+  },
+  "shots-2-0": {
+    "w": 2000,
+    "h": 1334
+  },
+  "sled-detail": {
+    "w": 2000,
+    "h": 1334
+  },
+  "box-and-tins": {
+    "w": 2000,
+    "h": 1334
+  },
+  "box-pair": {
+    "w": 2000,
+    "h": 1334
+  },
+  "tins-and-box-2": {
+    "w": 2000,
+    "h": 1334
+  },
+  "anatomy": {
+    "w": 1024,
+    "h": 683
+  },
+  "evolution": {
+    "w": 1024,
+    "h": 663
+  },
+  "timeline": {
+    "w": 1024,
+    "h": 576
+  },
+  "wholesale-mood": {
+    "w": 1920,
+    "h": 1087
+  },
+  "set-square": {
+    "w": 975,
+    "h": 975
+  },
+  "bundle-1-graphic": {
+    "w": 1080,
+    "h": 1080
+  },
+  "bundle-2-graphic": {
+    "w": 1080,
+    "h": 1080
+  },
+  "sled-photo": {
+    "w": 1600,
+    "h": 1067
+  },
+  "spring-photo": {
+    "w": 1600,
+    "h": 1406
+  },
+  "home-bg-slate": {
+    "w": 1920,
+    "h": 1080
+  },
+  "logo-black": {
+    "w": 405,
+    "h": 185
+  },
+  "logo-white": {
+    "w": 405,
+    "h": 185
+  },
+  "bolt": {
+    "w": 640,
+    "h": 637
+  },
+  "hero-hand": {
+    "w": 1013,
+    "h": 791,
+    "anchor": {
+      "x": 0.1422,
+      "y": 0.9684
+    }
+  },
+  "cut-standard": {
+    "w": 557,
+    "h": 1269
+  },
+  "cut-2-0": {
+    "w": 473,
+    "h": 933
+  },
+  "cut-set": {
+    "w": 678,
+    "h": 791
+  },
+  "cut-sled": {
+    "w": 1100,
+    "h": 459
+  },
+  "cut-spring": {
+    "w": 1100,
+    "h": 950
+  },
+  "cut-bundle-1": {
+    "w": 666,
+    "h": 813
+  },
+  "cut-bundle-2": {
+    "w": 666,
+    "h": 813
+  },
+  "std-studio": {
+    "w": 1600,
+    "h": 1600
+  },
+  "two-studio": {
+    "w": 1524,
+    "h": 1524
+  }
+}

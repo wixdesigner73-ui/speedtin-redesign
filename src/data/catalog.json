@@ -1,0 +1,311 @@
+{
+  "store": "https://speedtin.com",
+  "syncedAt": "2026-10-14T17:21:55.562Z",
+  "collections": {
+    "shop": [
+      "standard-stainless-steel",
+      "2-0-stainless-steel",
+      "the-set-1-standard-speed-tin-1-2-0-speed-tin",
+      "replacement-sled",
+      "replacement-spring-gaskets",
+      "grip-fire"
+    ],
+    "bars-and-restaurants": [
+      "speed-tin-bar-bundle-4",
+      "speed-tin-bar-bundle-3"
+    ]
+  },
+  "products": [
+    {
+      "id": 9357016989928,
+      "handle": "50-speed-tin-2-0",
+      "title": "Speed Tin 2.0 (50 Units)",
+      "description": "",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 48167150977256,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 849.5,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": 9323097686248,
+      "handle": "grip-fire",
+      "title": "Colored Grips",
+      "description": "Set your Speed Tin apart with this colored grip! Easily change out your grip with a flat screw driver! Just insert the screwdriver into the slot on the back of the sled and twist! Note: Only the neutral finger placement is available for colors at this time!",
+      "options": [
+        {
+          "name": "Color",
+          "values": [
+            "Red",
+            "Fire",
+            "Green",
+            "Ice",
+            "Pink"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 48139300536552,
+          "title": "Red",
+          "option1": "Red",
+          "price": 3.99,
+          "compareAt": null,
+          "available": false
+        },
+        {
+          "id": 48139300569320,
+          "title": "Fire",
+          "option1": "Fire",
+          "price": 3.99,
+          "compareAt": null,
+          "available": false
+        },
+        {
+          "id": 48139300602088,
+          "title": "Green",
+          "option1": "Green",
+          "price": 3.99,
+          "compareAt": null,
+          "available": false
+        },
+        {
+          "id": 48139300634856,
+          "title": "Ice",
+          "option1": "Ice",
+          "price": 3.99,
+          "compareAt": null,
+          "available": false
+        },
+        {
+          "id": 48550991626472,
+          "title": "Pink",
+          "option1": "Pink",
+          "price": 3.99,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/HY4A7125.jpg"
+      ]
+    },
+    {
+      "id": 9294126022888,
+      "handle": "speed-tin-bar-bundle-4",
+      "title": "Speed Tin Bar Bundle #1",
+      "description": "Includes (3) Speed Tin Standards and (3) Speed Tin 2.0. Note: Does not include product packaging. Affiliate Discounts Do Not Apply",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47939869835496,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 99,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/Speedtin_Bundle_Graphic.png"
+      ]
+    },
+    {
+      "id": 9277920968936,
+      "handle": "speed-tin-bar-bundle-3",
+      "title": "Speed Tin Bar Bundle #2",
+      "description": "Includes (5) Speed Tin Standards and (5) Speed Tin 2.0. Note: Does not include product packaging. Discounts Affiliate Do Not Apply",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47885451886824,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 159.99,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/Untitled.png"
+      ]
+    },
+    {
+      "id": 9264001777896,
+      "handle": "replacement-spring-gaskets",
+      "title": "Replacement Spring & Gaskets",
+      "description": "Replacement Spring & Gaskets for Sled of Speed Tin Standard and Speed Tin 2.0",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47833146818792,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 3.99,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/0A1A6058_106bd5ff-1bb9-4665-b60f-d1f25e465d2a.jpg"
+      ]
+    },
+    {
+      "id": 9263998533864,
+      "handle": "replacement-sled",
+      "title": "Replacement Sled",
+      "description": "(1) Replacement Sled for Speed Tin Standard and Speed Tin 2.0",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47833126109416,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 8.99,
+          "compareAt": null,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/0A1A6045.jpg"
+      ]
+    },
+    {
+      "id": 9185413071080,
+      "handle": "the-set-1-standard-speed-tin-1-2-0-speed-tin",
+      "title": "The Set (1 Standard Speed Tin, 1 2.0 Speed Tin)",
+      "description": "The Set includes (1) Speed Tin Standard and (1) Speed Tin 2.0 with their corresponding shaker tins. Speed Tin is the first one-handed cocktail shaker engineered to make bartending faster, cleaner, and more consistent. Designed with working bartenders in mind, its patented quick-pour mechanism and built-in strainer eliminate the need to break tins or swap tools between shakes—reducing steps and increasing throughput during service. Crafted from high-grade stainless steel for durability and aesthetic. Whether you’re behind a high-volume bar or mixing at home, Speed Tin streamlines your workflow without sacrificing craftsmanship.",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47516010053864,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 40,
+          "compareAt": 74.99,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/GIVE_THE_GIFT_OF_SPEED_1.png",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/image0.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2440.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2206.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2235.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2343.jpg"
+      ]
+    },
+    {
+      "id": 9185412579560,
+      "handle": "2-0-stainless-steel",
+      "title": "Speed Tin 2.0 - 16oz Stainless Steel",
+      "description": "The Speed Tin 2.0 is a smaller version designed to pair with most 16oz Cocktail Shaker Tins. (1) 16oz Stainless Steel Shaker Tin is included. Perfect for shots or a single cocktail Comes with 3 Different Grips",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47516009496808,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 24.99,
+          "compareAt": 29.99,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2225.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/image0.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2414_-_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2234.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2424.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2440.jpg"
+      ]
+    },
+    {
+      "id": 9183962824936,
+      "handle": "standard-stainless-steel",
+      "title": "Speed Tin Standard - 28oz Stainless Steel",
+      "description": "Our Standard Version of Speed Tin that can be paired with most 28 oz Cocktail Shaker Tins - Perfect for multiple shots or cocktails - Comes with 3 Different Grips",
+      "options": [
+        {
+          "name": "Title",
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 47900193194216,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "price": 29.99,
+          "compareAt": 39.99,
+          "available": true
+        }
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2229.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/image0.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2231.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2414_-_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0719/9214/8200/files/R5_A2440.jpg"
+      ]
+    }
+  ]
+}

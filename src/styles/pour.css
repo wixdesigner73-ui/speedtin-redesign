@@ -1,0 +1,283 @@
+/* ============ THE CONNECTED POUR: hero + glass section as one scene ============ */
+.pour {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background:
+    radial-gradient(120% 60% at 80% 0%, #3a2519 0%, transparent 60%),
+    linear-gradient(180deg, #1a100c 0%, var(--espresso) 30%, #2a1a14 68%, #261811 100%);
+}
+.pour__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.pour__bg-glow {
+  position: absolute;
+  right: -18vw;
+  top: -22vw;
+  width: min(1300px, 92vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(185, 108, 55, 0.34), rgba(185, 108, 55, 0.1) 52%, transparent 74%);
+  opacity: 0;
+}
+.pour::before {
+  /* ruby spill of light around the glass */
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 150svh;
+  width: min(900px, 90vw);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(232, 65, 106, 0.16), rgba(185, 108, 55, 0.08) 55%, transparent 75%);
+  pointer-events: none;
+}
+.bokeh {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0.5;
+}
+.bokeh.b1 { width: 130px; height: 130px; right: 8vw; top: 12vh; background: radial-gradient(circle, rgba(255, 190, 110, 0.55), transparent 70%); }
+.bokeh.b2 { width: 70px; height: 70px; right: 24vw; top: 26vh; background: radial-gradient(circle, rgba(255, 215, 160, 0.5), transparent 70%); }
+.bokeh.b3 { width: 190px; height: 190px; right: -2vw; top: 42vh; background: radial-gradient(circle, rgba(185, 108, 55, 0.5), transparent 70%); }
+.bokeh.b4 { width: 54px; height: 54px; left: 46vw; top: 18vh; background: radial-gradient(circle, rgba(255, 180, 120, 0.45), transparent 70%); }
+.bokeh.b5 { width: 100px; height: 100px; left: 4vw; bottom: 8vh; background: radial-gradient(circle, rgba(232, 65, 106, 0.22), transparent 70%); }
+
+/* ---------- hero ---------- */
+.pour__hero {
+  position: relative;
+  z-index: 2;
+  min-height: max(100svh, 740px);
+}
+.pour__heroInner {
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+  padding-top: var(--header-h);
+  padding-bottom: 6vh;
+}
+.pour__copy {
+  position: relative;
+  z-index: 5;
+  max-width: min(44vw, 640px);
+}
+.pour__title {
+  margin: 24px 0 24px;
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+}
+.pour__title .serif {
+  font-size: 1.03em;
+  color: var(--champagne);
+  padding-right: 0.04em;
+}
+.pour__sub {
+  font-family: var(--ff-head);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 1.55vw, 1.5rem);
+  letter-spacing: -0.015em;
+  color: var(--ivory-72);
+  margin-bottom: 36px;
+}
+.pour__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pour__hand {
+  --hand-w: clamp(520px, 58vw, 940px);
+  --hand-h: calc(var(--hand-w) * var(--ar));
+  --spout-y: 66%;
+  position: absolute;
+  z-index: 3;
+  width: var(--hand-w);
+  /* the spout (anchor) sits exactly on the page's vertical centre line, so the stream falls straight into the glass */
+  left: calc(50% - var(--ax) * var(--hand-w));
+  top: calc(var(--spout-y) - var(--ay) * var(--hand-h));
+  pointer-events: none;
+}
+.pour__handInner {
+  position: relative;
+  will-change: transform;
+}
+.pour__handInner img {
+  width: 100%;
+  filter: drop-shadow(0 38px 46px rgba(0, 0, 0, 0.55)) drop-shadow(-14px 8px 30px rgba(185, 108, 55, 0.18));
+}
+.pour__anchor {
+  position: absolute;
+  left: calc(var(--ax) * 100%);
+  top: calc(var(--ay) * 100%);
+  width: 2px;
+  height: 2px;
+  margin: -1px 0 0 -1px;
+}
+
+.pour__scroll {
+  position: absolute;
+  z-index: 5;
+  left: var(--gutter);
+  bottom: 4vh;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--ff-head);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ivory-56);
+}
+.pour__scroll i {
+  position: relative;
+  width: 1px;
+  height: 46px;
+  background: var(--ivory-24);
+  overflow: hidden;
+}
+.pour__scroll i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -40%;
+  width: 1px;
+  height: 40%;
+  background: var(--champagne);
+  animation: drip 2.4s var(--ease-in-out) infinite;
+}
+@keyframes drip {
+  to { top: 110%; }
+}
+
+/* ---------- glass section ---------- */
+.pour__glassSec {
+  position: relative;
+  z-index: 2;
+  min-height: 118svh;
+  padding: 0 0 16vh;
+}
+.pour__glassGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 36vw) minmax(0, 1fr);
+  column-gap: clamp(16px, 3vw, 56px);
+  align-items: center;
+}
+.pour__glassWrap {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: 620px;
+  width: min(620px, 44vw);
+  aspect-ratio: 640 / 820;
+  justify-self: center;
+  margin-top: 13vh;
+}
+.pour__glassWrap canvas {
+  width: 100%;
+  height: 100%;
+}
+.pour__glassShadow {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 3%;
+  height: 7%;
+  background: radial-gradient(closest-side, rgba(232, 65, 106, 0.3), rgba(0, 0, 0, 0.0));
+  filter: blur(12px);
+  z-index: -1;
+}
+.pour__glassCopy {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 30vh;
+  max-width: 440px;
+  display: grid;
+  gap: 22px;
+  justify-items: start;
+}
+.pour__glassCopy .h2 {
+  font-size: clamp(2rem, 3.6vw, 3.7rem);
+}
+.pour__benefits {
+  grid-column: 3;
+  grid-row: 1;
+  margin-top: 30vh;
+  max-width: 400px;
+  justify-self: end;
+  display: grid;
+  gap: 0;
+  counter-reset: b;
+}
+.pour__benefits li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  column-gap: 8px;
+  row-gap: 4px;
+  padding: 22px 0 22px;
+  border-top: 1px solid var(--ivory-12);
+}
+.pour__benefits li:last-child {
+  border-bottom: 1px solid var(--ivory-12);
+}
+.pour__benefits .n {
+  grid-row: 1 / span 2;
+  font-family: var(--ff-head);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--champagne);
+  padding-top: 0.5em;
+}
+.pour__benefits strong {
+  font-family: var(--ff-head);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.75vw, 1.7rem);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.pour__benefits .d {
+  color: var(--ivory-56);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pour__stream {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ---------- tablet & phone: re-stack, keep the spout on the centre line ---------- */
+@media (max-width: 1024px) {
+  .pour__hero { min-height: max(100svh, 920px); }
+  .pour__heroInner { align-items: flex-start; padding-top: calc(var(--header-h) + 5vh); }
+  .pour__copy { max-width: 560px; }
+  .pour__title { font-size: clamp(2.7rem, 8.4vw, 5.2rem); }
+  .pour__hand { --hand-w: clamp(440px, 76vw, 700px); --spout-y: 90%; }
+  .pour__scroll { display: none; }
+
+  .pour__glassGrid { grid-template-columns: 1fr; row-gap: 40px; justify-items: center; }
+  .pour__glassWrap { grid-column: 1; grid-row: 1; width: min(76vw, 460px); margin-top: 7vh; }
+  .pour__glassCopy { grid-column: 1; grid-row: 2; margin-top: 0; justify-items: center; text-align: center; max-width: 560px; }
+  .pour__benefits { grid-column: 1; grid-row: 3; margin-top: 0; justify-self: stretch; max-width: 560px; margin-inline: auto; width: 100%; }
+  .pour__glassSec { min-height: 0; padding-bottom: 12vh; }
+}
+@media (max-width: 720px) {
+  .pour__hero { min-height: max(100svh, 860px); }
+  .pour__title { font-size: clamp(2.5rem, 11.4vw, 3.6rem); margin: 18px 0 18px; }
+  .pour__sub { margin-bottom: 26px; }
+  .pour__cta .btn { min-height: 50px; padding: 0 22px; }
+  .pour__hand { --hand-w: 124vw; --spout-y: 92%; }
+  .pour__glassWrap { width: min(86vw, 400px); }
+  .pour__benefits li { grid-template-columns: 34px 1fr; }
+}

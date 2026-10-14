@@ -1,0 +1,39 @@
+:root {
+  /* Art-direction palette (supporting the Speed Tin steel / black / white identity) */
+  --espresso: #241813;
+  --chocolate: #39251e;
+  --ivory: #f5f0e8;
+  --champagne: #c7a77a;
+  --charcoal: #171717;
+  --silver: #b8b9b6;
+  --amber: #b96c37;
+  --ruby: #e8416a; /* the cocktail itself; used sparingly */
+
+  --ivory-72: rgba(245, 240, 232, 0.72);
+  --ivory-56: rgba(245, 240, 232, 0.56);
+  --ivory-24: rgba(245, 240, 232, 0.24);
+  --ivory-12: rgba(245, 240, 232, 0.12);
+  --ink-72: rgba(23, 23, 23, 0.72);
+  --ink-56: rgba(23, 23, 23, 0.56);
+  --ink-14: rgba(23, 23, 23, 0.14);
+
+  --ff-head: "Manrope Variable", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-body: "DM Sans Variable", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+
+  --gutter: clamp(20px, 4.4vw, 72px);
+  --maxw: 1480px;
+  --header-h: 76px;
+
+  --ease: cubic-bezier(0.22, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --radius: 22px;
+  --radius-lg: 36px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 64px;
+  }
+}

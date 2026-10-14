@@ -1,0 +1,15 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch({ args: ["--use-gl=angle","--use-angle=swiftshader","--enable-unsafe-swiftshader","--ignore-gpu-blocklist"] });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+const errs = []; page.on("pageerror", e => errs.push(e.message)); page.on("console", m => m.type()==="error" && errs.push(m.text()));
+await page.goto("http://localhost:5173/pages/learn-more", { waitUntil: "load" }); await page.waitForTimeout(2500);
+await page.screenshot({ path: "shots/chk_how.png", timeout: 120000 });
+await page.goto("http://localhost:5173/products/grip-fire", { waitUntil: "load" }); await page.waitForTimeout(1500);
+await page.click(".buybox__add"); await page.waitForTimeout(1200);
+await page.screenshot({ path: "shots/chk_cart.png", timeout: 120000 });
+console.log("cart link:", await page.getAttribute(".drawer__checkout", "href"));
+await page.keyboard.press("Escape"); await page.waitForTimeout(600);
+await page.hover(".hdr__item"); await page.waitForTimeout(800);
+await page.screenshot({ path: "shots/chk_mega.png", timeout: 120000 });
+console.log("errors:", errs.slice(0,5));
+await browser.close();
